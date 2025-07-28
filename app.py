@@ -21,6 +21,10 @@ for i in range(num_cards):
         induced_cards.append((name, count))
         total_h += count
 
+non_induced = deck_size - total_h
+st.markdown(f"✅ 妨害カードの合計枚数 (h): **{total_h}** 枚")
+st.markdown(f"📦 妨害以外のカード枚数: **{non_induced}** 枚")
+
 st.divider()
 
 st.header("② デッキの設定")
