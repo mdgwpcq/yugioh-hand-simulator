@@ -6,7 +6,7 @@ st.set_page_config(page_title="遊戯王 妨害カード内訳ジェネレータ
 st.title("🃏 妨害カード内訳ジェネレーター")
 
 st.header("① 妨害カードの設定")
-num_cards = st.number_input("妨害カードの種類数 (p)", min_value=1, max_value=20, value=4)
+num_cards = st.number_input("妨害カードの種類数 (p)", min_value=1, max_value=30, value=4)
 
 induced_cards = []
 total_h = 0
@@ -28,7 +28,7 @@ col_deck_label, col_deck_input = st.columns([2, 1])
 with col_deck_label:
     st.markdown("#### 相手のデッキ枚数")
 with col_deck_input:
-    deck_size = st.number_input("", min_value=30, max_value=60, value=40, step=1)
+    deck_size = st.number_input("", min_value=40, max_value=60, value=40, step=1)
 
 non_induced_count = deck_size - total_h
 
